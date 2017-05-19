@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Health&BeautyBoard(HnBB)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=tis-620">
+
+<STYLE type=text/css>
+  A:link { color: #0000cc; text-decoration:none}
+  A:visited {color: #0000cc; text-decoration: none}
+  A:hover {color: red; text-decoration: none}
+ </STYLE>
+<style type="text/css">
+<!--
+small { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; } 
+input, textarea { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; } 
+b { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; } 
+big { font-family: Arial, Helvetica, sans-serif; font-size: 25pt; } 
+strong { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; font-weight : extra-bold; } 
+font, td { font-family: Arial, Helvetica, sans-serif; font-size: 12pt; } 
+BODY { font-size: 12pt; font-family: Arial, Helvetica, sans-serif; } 
+-->
+</style>
+
+<script language="JavaScript">
+function check()
+{
+      var v1 = document.login_form.email.value;
+      var v2 = document.login_form.password.value;
+
+        if (v1.length==0)
+           {
+           alert("กรุณากรอก อีเมล์ของคุณ ด้วย");
+           document.login_form.email.focus();           
+           return false;
+           }
+        else if (v2.length==0)
+           {
+           alert("กรุณากรอก รหัสผ่าน ด้วย") ;
+           document.login_form.password.focus();           
+           return false;
+           }
+        else
+           return true;
+}
+</script>
+
+<script language="javascript">
+var win = null;
+function NewWindow(mypage,myname,w,h,scroll){
+LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+settings =
+'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',menubar=yes,scrollbars='+scroll+',resizable'
+win = window.open(mypage,myname,settings)
+}
+</script>
+
+<script language="javascript">
+var win = null;
+function NewWindow(mypage,myname,w,h,scroll){
+LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+settings =
+'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',menubar=yes,scrollbars='+scroll+',resizable'
+win = window.open(mypage,myname,settings)
+}
+</script>
+
+</head>
+
+<body bgcolor=#d6dbd5>
+<p align="CENTER"><br>
+<font color=#9400d3><big>แหล่งรวบรวมความรู้ ประสบการณ์เกี่ยวกับสุขภาพและความงาม</big></font><br><br>เพื่อแลกเปลี่ยนความรู้, ประสบการณ์, ถาม-ตอบ, แนะนำ, ประกาศ, หรือทุกสิ่งตามต้องการเกี่ยวกับสุขภาพและความงาม
+<br><br>
+</p>
+
+<table width="98%" border="0" align="center" cellpadding="2" cellspacing="0">
+
+
+
+
+<tr> 
+<td width="45%">[ <a href="index.php">หน้าหลักเว็บบอร์ด</a> | <a href="post.php">ตั้งกระทู้ใหม่</a> | <a href="register.php">สมัครสมาชิก</a> ]</td>
+<td width="55%">
+<div align="right">
+
+[ <a href="login.php">เข้าสู่ระบบ</a> ]
+</div>
+</td>
+</tr>
+</table>
+
+<center>
+<br>
+
+<form name="login_form" method="post" action="login_in.php" enctype="multipart/form-data" onsubmit="return check();" >
+<table width="700" border="0" cellspacing="0" cellpadding="0" bgcolor="#686898">
+
+    <tr> 
+      <td>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top" width="2%"></td>
+            <td width="96%">
+              <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                <tr align="center"> 
+                  <td><b><font color="#FFFFFF">&lt&lt เข้าสู่ระบบ &gt&gt 
+                    </font></b></td>
+                </tr>
+              </table>
+            </td>
+            <td valign="top" align="right" width="2%"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <table border=0 cellpadding=2 cellspacing=1 width="100%">
+            <tr> 
+              <td align=center bgcolor="#E5E5FF"> 
+                <table width="100%" border="0" cellpadding="2" cellspacing="0">
+                  <tr> 
+                    <td width="35%"> 
+                      <div align="right"><font color="red"><b>*</b></font> <font color="#686898"><b>อีเมล์ของคุณ : </b></font></div>
+                    </td>
+                    <td width="65%"> 
+                      <input type="text" name="email" size="30" maxlength="100">
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td> 
+                      <div align="right"><font color="red"><b>*</b></font> <font color="#686898"><b>รหัสผ่าน : </b></font></div>
+                    </td>
+                    <td> 
+                      <input type="password" name="password" size="30" maxlength="20"> [ <a href="forget_password.php" onclick="NewWindow(this.href,'rule_win','500','300','yes');return false">ลืมรหัสผ่าน คลิ๊กที่นี่</a> ]
+                    </td>
+                  </tr>
+
+
+                </table>
+
+              </td>
+            </tr>
+        </table>
+
+    </td>
+      </tr>
+
+
+
+
+    <tr>
+      <td>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td valign="bottom" width="2%"></td>
+            <td width="96%"> 
+              <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                <tr align="center" valign="middle"> 
+                  <td><b><font color="#FFFFFF"> 
+                    <input type=submit value='เข้าสู่ระบบ' name="submit_bt">
+                    <input type=reset value='ยกเลิก' name="reset_bt">
+                    </font></b></td>
+                </tr>
+              </table>
+            </td>
+            <td valign="bottom" align="right" width="2%"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+  </table>
+   </form>
+
+<br>  
+
+
+</body>
+</html>

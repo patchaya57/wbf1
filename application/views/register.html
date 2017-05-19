@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Health&BeautyBoard(HnBB)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=tis-620">
+
+<STYLE type=text/css>
+  A:link { color: #0000cc; text-decoration:none}
+  A:visited {color: #0000cc; text-decoration: none}
+  A:hover {color: red; text-decoration: none}
+ </STYLE>
+<style type="text/css">
+<!--
+small { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; } 
+input, textarea,select { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; } 
+b { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; } 
+big { font-family: Arial, Helvetica, sans-serif; font-size: 25pt; } 
+strong { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; font-weight : extra-bold; } 
+font, td { font-family: Arial, Helvetica, sans-serif; font-size: 12pt; } 
+BODY { font-size: 12pt; font-family: Arial, Helvetica, sans-serif; } 
+-->
+</style>
+
+<script language="javascript">
+var win = null;
+function NewWindow(mypage,myname,w,h,scroll){
+LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+settings =
+'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',menubar=yes,scrollbars='+scroll+',resizable'
+win = window.open(mypage,myname,settings)
+}
+</script>
+
+<script language="JavaScript" type="text/javascript" src="js/chkform_regis.js"></script>
+
+
+<script language="javascript">
+var win = null;
+function NewWindow(mypage,myname,w,h,scroll){
+LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+settings =
+'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',menubar=yes,scrollbars='+scroll+',resizable'
+win = window.open(mypage,myname,settings)
+}
+</script>
+
+</head>
+
+<body bgcolor=#d6dbd5>
+<p align="CENTER"><br>
+<font color=#9400d3><big>แหล่งรวบรวมความรู้ ประสบการณ์เกี่ยวกับสุขภาพและความงาม</big></font><br><br>เพื่อแลกเปลี่ยนความรู้, ประสบการณ์, ถาม-ตอบ, แนะนำ, ประกาศ, หรือทุกสิ่งตามต้องการเกี่ยวกับสุขภาพและความงาม 
+<br><br>
+</p>
+
+<table width="98%" border="0" align="center" cellpadding="2" cellspacing="0">
+
+
+
+
+<tr> 
+<td width="45%">[ <a href="index.php">หน้าหลักเว็บบอร์ด</a> | <a href="post.php">ตั้งกระทู้ใหม่</a> | <a href="register.php">สมัครสมาชิก</a> ]</td>
+<td width="55%">
+<div align="right">
+
+[ <a href="login.php">เข้าสู่ระบบ</a> ]
+</div>
+</td>
+</tr>
+</table>
+
+<center>
+<br>
+
+<form name="register_frm" method="post" action="register_in.php" enctype="multipart/form-data" onsubmit="return checkform(this);" >
+<table width="700" border="0" cellspacing="0" cellpadding="0" bgcolor="#686898">
+
+    <tr> 
+      <td>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top" width="2%"></td>
+            <td width="96%">
+              <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                <tr align="center"> 
+                  <td><b><font color="#FFFFFF">&lt&lt สมัครสมาชิก &gt&gt 
+                    </font></b></td>
+                </tr>
+              </table>
+            </td>
+            <td valign="top" align="right" width="2%"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+
+
+
+
+
+
+
+
+
+    <tr>
+      <td>
+        <table border=0 cellpadding=2 cellspacing=1 width="100%">
+            <tr> 
+              <td align=center bgcolor="#E5E5FF"> 
+                <table width="100%" border="0" cellpadding="2" cellspacing="0">
+                  <tr> 
+                    <td width="35%"> 
+                      <div align="right"><font color="red"><b>*</b></font> <font color="#686898"><b>อีเมล์ของคุณ : </b></font></div>
+                    </td>
+                    <td width="65%"> 
+                      <input type="text" name="email" size="30" maxlength="100">
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td> 
+                      <div align="right"><font color="red"><b>*</b></font> <font color="#686898"><b>รหัสผ่าน : </b></font></div>
+                    </td>
+                    <td> 
+                      <input type="password" name="password" size="30" maxlength="20">
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td> 
+                      <div align="right"><font color="red"><b>*</b></font> <font color="#686898"><b>ชื่อที่จะแสดงในเว็บบอร์ด : </b></font></div>
+                    </td>
+                    <td> 
+                      <input type="text" name="username" size="30" maxlength="100">
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td> 
+                      <div align="right"><font color="red"><b>*</b></font> <font color="#686898"><b>ชื่อ : </b></font></div>
+                    </td>
+                    <td> 
+                      <input type="text" name="firstname" size="30" maxlength="100">
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td> 
+                      <div align="right"><font color="red"><b>*</b></font> <font color="#686898"><b>นามสกุล : </b></font></div>
+                    </td>
+                    <td> 
+                      <input type="text" name="lastname" size="30" maxlength="100">
+                    </td>
+                  </tr>
+
+
+                  <tr> 
+                    <td> 
+                      <div align="right"><font color="red"><b>*</b></font> <font color="#686898"><b>เลขที่บัตรประชาชน : </b></font></div>
+                    </td>
+                    <td> 
+                      <input type="text" name="idcard" size="11" maxlength="13">
+                    </td>
+                  </tr>
+
+
+                  <tr> 
+                    <td> 
+                      <div align="right"><font color="red"><b>*</b></font> <font color="#686898"><b>เบอร์โทรศัพท์ : </b></font></div>
+                    </td>
+                    <td> 
+                      <input type="text" name="tel" size="30" maxlength="100">
+                    </td>
+                  </tr>
+
+                  <tr> 
+                    <td valign="top"> 
+                      <div align="right"><font color="red"><b>*</b></font> <font color="#686898"><b>ที่อยู่ : </b></font></div>
+                    </td>
+                    <td> 
+                      <textarea rows="5" cols="32" name="address"></textarea>
+                    </td>
+                  </tr>
+
+                  <tr> 
+                    <td> 
+                      <div align="right"><font color="red"><b>*</b></font> <font color="#686898"><b>งานอดิเรก : </b></font></div>
+                    </td>
+                    <td> 
+                      <select name="activities">
+	      <option value="">--------------- โปรดเลือก ---------------</option>
+	      <option value="อ่านหนังสือ">อ่านหนังสือ</option>
+	      <option value="กิจกรรมเพื่อสังคม">กิจกรรมเพื่อสังคม</option>
+	      <option value="ประกวดภาพถ่าย">ประกวดภาพถ่าย</option>
+	      <option value="อื่นๆ">อื่นๆ</option>
+	    </select>
+                    </td>
+                  </tr>
+
+                  <tr> 
+                    <td> 
+                      <div align="right"><font color="#686898"><b>รูปภาพประจำตัว : </b></font></div>
+                    </td>
+                    <td> 
+                      <input name="filesattach_name[]" id="imgattach_name" type="file" size="30" /> 
+                    </td>
+                  </tr>
+
+                  <tr> 
+                    <td> 
+                   <tr>                   
+                    <td colspan="2"><br>
+                      <div align="center">
+<INPUT type="checkbox" name="chkagreement" onClick="apply()">
+<font color="#000000">
+<B><I>ฉันได้อ่านและยอมรับ <a href="rule.php" onclick="NewWindow(this.href,'rule_win','900','600','yes');return false">ข้อตกลงในการใช้งานเว็บบอร์ด</a> เป็นที่เรียบร้อยแล้ว</l></B></font></p>
+                      </div> 
+                    </td>
+                  </tr>
+
+                </table>
+
+              </td>
+            </tr>
+        </table>
+
+    </td>
+      </tr>
+
+
+
+
+    <tr>
+      <td>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td valign="bottom" width="2%"></td>
+            <td width="96%"> 
+              <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                <tr align="center" valign="middle"> 
+                  <td><b><font color="#FFFFFF"> 
+                    <input type=submit value='สมัครสมาชิก' name="submit_bt" disabled>
+                    <input type=reset value='ยกเลิก' name="reset_bt">
+                    </font></b></td>
+                </tr>
+              </table>
+            </td>
+            <td valign="bottom" align="right" width="2%"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+  </table>
+   </form>
+
+<br>  
+
+
+</body>
+</html>

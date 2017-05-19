@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Welcome To My Webboard</title>
+<meta http-equiv="Content-Type" content="text/html; charset=tis-620">
+
+<STYLE type=text/css>
+  A:link { color: #0000cc; text-decoration:none}
+  A:visited {color: #0000cc; text-decoration: none}
+  A:hover {color: red; text-decoration: none}
+ </STYLE>
+<style type="text/css">
+<!--
+small { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; } 
+input, textarea,select { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; } 
+b { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; } 
+big { font-family: Arial, Helvetica, sans-serif; font-size: 25pt; } 
+strong { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; font-weight : extra-bold; } 
+font, td { font-family: Arial, Helvetica, sans-serif; font-size: 12pt; } 
+BODY { font-size: 12pt; font-family: Arial, Helvetica, sans-serif; } 
+-->
+</style>
+
+<script language="JavaScript">
+function check_search()
+{
+      var v1 = document.SearchForm.keyword.value;
+        if ( v1.length==0)
+           {
+           alert("กรุณากรอก คำที่ต้องการค้นหา");
+           document.SearchForm.keyword.focus();
+           return false;
+           }
+           else
+           return true;
+}
+</script>
+
+<script language="javascript">
+var win = null;
+function NewWindow(mypage,myname,w,h,scroll){
+LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+settings =
+'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',menubar=yes,scrollbars='+scroll+',resizable'
+win = window.open(mypage,myname,settings)
+}
+</script>
+
+</head>
+
+<body bgcolor=#d6dbd5>
+<p align="CENTER"><br>
+<font color=#9400d3><big>Welcome To My Webboard</big></font><br><br>เพื่อแลกเปลี่ยนความรู้, ประสบการณ์, ถาม-ตอบ, แนะนำ, หรือทุกสิ่งตามต้องการเกี่ยวกับสุขภาพและความงาม 
+<br><br>
+</p>
+
+<table width="98%" border="0" align="center" cellpadding="2" cellspacing="0">
+
+
+
+
+<tr> 
+<td width="45%">[ <a href="index.php">หน้าหลักเว็บบอร์ด</a> | <a href="post.php">ตั้งกระทู้ใหม่</a> | <a href="register.php">สมัครสมาชิก</a> ]</td>
+<td width="55%">
+<div align="right">
+
+[ <a href="login.php">เข้าสู่ระบบ</a> ]
+</div>
+</td>
+</tr>
+
+
+<tr>
+<form method=post action="index.php" name="ShowForm">
+<td> หมวดหมู่ : 
+<select name="category_show">
+  <option value="">แสดงกระทู้ในทุกหมวดหมู่</option>
+<option value="1" >หมวดหมู่ที่ 1</option>
+<option value="3" >หมวดหมู่ที่ 3</option>
+<option value="2" >หมวดหมู่ที่ 2</option>
+
+</select> <input type="submit" value="แสดง" name="show_bt">
+</td>
+</form>
+
+<form method=post action="search.php" name="SearchForm" onsubmit="return check_search();">
+<input type="hidden" name="category_show" value="">
+<td><div align=right> ค้นหากระทู้ : <input type="text" name="keyword" size="20" maxlength="200">
+<input type="submit" value="ค้นหา" name="search_bt">
+</div>
+</td>
+</form>
+
+</tr>
+
+</table>
+
+<TABLE align=center cellSpacing=0 cellPadding=0 width=98% border=0>
+<TR>
+<TD>
+
+<table width="100%" border=0 cellpadding=3 cellspacing=1 align="center">
+<tr bgcolor=#000000>
+<td align=center width=52%><font color=#FFFFFF><b>กระทู้ / Topic</b></font></td>
+<td align=center width=22%><font color=#FFFFFF><b>ผู้ตั้งกระทู้ [วันที่โพส]</b></font>
+<br><a href='?start=0&page=1&category_show=&or1=datetime_send&or2=ASC'><a href='?start=0&page=1&category_show=&or1=datetime_send&or2=DESC'></a></td>
+<td align=center width=7%><font color=#FFFFFF><b>จำนวนอ่าน</b></font>
+<br><a href='?start=0&page=1&category_show=&or1=view_count&or2=ASC'></a> <a href='?start=0&page=1&category_show=&or1=view_count&or2=DESC'></a></td>
+<td align=center width=19%><font color=#FFFFFF><b>จำนวนตอบ [วันที่ตอบล่าสุด]</b></font>
+<br><a href='?start=0&page=1&category_show=&or1=datetime_update&or2=ASC'></a></td>
+</tr>
+
+
+
+
+
+
+<tr bgcolor=#FAF2E6>
+<td><a href='view.php?id=1' target="_blank">ทดสอบการตั้งกระทู้</a></td>
+<td><font color='#666666'><b> Administrator </b>[18/05/2560 16:16:26]</font></td>
+<td><div align='center'><font  color='#666666'> 0 </font></div></td>
+<td><div align='center'><font color=green><b> 0</b></font> </div></td>
+</tr>
+
+<tr bgcolor=#BBBBBB>
+
+<td colspan='5'><font color=#000000><b>หน้าที่ : [<a href='?start=0&page=1&category_show=&or1=datetime_update&or2=DESC'>1</A>]</b></font></td>
+</tr>
+
+</table>
+</TD></TR>
+</TABLE>
+
+ 
+
+</body>
+</html>

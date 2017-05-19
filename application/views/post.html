@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Health&BeautyBoard(HnBB)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=tis-620">
+
+<STYLE type=text/css>
+  A:link { color: #0000cc; text-decoration:none}
+  A:visited {color: #0000cc; text-decoration: none}
+  A:hover {color: red; text-decoration: none}
+ </STYLE>
+<style type="text/css">
+<!--
+small { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; } 
+input, textarea,select { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; } 
+b { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; } 
+big { font-family: Arial, Helvetica, sans-serif; font-size: 25pt; } 
+strong { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; font-weight : extra-bold; } 
+font, td { font-family: Arial, Helvetica, sans-serif; font-size: 12pt; } 
+BODY { font-size: 12pt; font-family: Arial, Helvetica, sans-serif; } 
+-->
+</style>
+
+<!-- TinyMCE -->
+<script type="text/javascript" src="tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript">
+	tinyMCE.init({
+		// General options
+		mode : "exact",
+		elements : "msg",
+		theme : "advanced",
+		plugins : "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,wordcount,advlist,autosave",
+
+
+		// Theme options
+		theme_advanced_buttons1 : "bold,italic,underline,strikethrough,sub,sup,|,outdent,indent,|,justifyleft,justifycenter,justifyright,justifyfull,|,bullist,numlist",
+		theme_advanced_buttons2 : "formatselect,fontselect,fontsizeselect,|,forecolor,backcolor",
+		theme_advanced_buttons3 : "link,unlink,image,charmap,emotions,media,advhr,|,fullscreen,preview,code",
+		theme_advanced_toolbar_location : "top",
+		theme_advanced_toolbar_align : "left",
+		theme_advanced_statusbar_location : "bottom",
+		theme_advanced_resizing : true,
+
+
+
+		// Drop lists for link/image/media/template dialogs
+		template_external_list_url : "tinymce/lists/template_list.js",
+		external_link_list_url : "tinymce/lists/link_list.js",
+		external_image_list_url : "tinymce/lists/image_list.js",
+		media_external_list_url : "tinymce/lists/media_list.js",
+
+
+
+	});
+</script>
+<!-- /TinyMCE -->
+
+<script language="javascript">
+var win = null;
+function NewWindow(mypage,myname,w,h,scroll){
+LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+settings =
+'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',menubar=yes,scrollbars='+scroll+',resizable'
+win = window.open(mypage,myname,settings)
+}
+</script>
+
+</head>
+
+<body bgcolor=#d6dbd5>
+<p align="CENTER"><br>
+<font color=#9400d3><big>แหล่งรวบรวมความรู้ ประสบการณ์เกี่ยวกับสุขภาพและความงาม</big></font><br><br>เพื่อแลกเปลี่ยนความรู้, ประสบการณ์, ถาม-ตอบ, แนะนำ, ประกาศ, หรือทุกสิ่งตามต้องการเกี่ยวกับสุขภาพและความงาม
+<br><br>
+</p>
+
+<table width="98%" border="0" align="center" cellpadding="2" cellspacing="0">
+
+
+
+
+<tr> 
+<td width="45%">[ <a href="index.php">หน้าหลักเว็บบอร์ด</a> | <a href="post.php">ตั้งกระทู้ใหม่</a> | <a href="register.php">สมัครสมาชิก</a> ]</td>
+<td width="55%">
+<div align="right">
+
+[ <a href="login.php">เข้าสู่ระบบ</a> ]
+</div>
+</td>
+</tr>
+
+</table>
+
+<center>
+<br>
+<table width="700" border="0" cellspacing="0" cellpadding="0" bgcolor="686898">
+
+
+
+
+
+<!-- แบบฟอร์มตั้งกระทู้ใหม่ สำหรับคนดูทั่วไป -->
+<script language="JavaScript" type="text/javascript" src="js/chkform_post.js"></script>
+<form method="post" action="post_in.php" name="post_topic" onSubmit="return check()"  enctype="multipart/form-data">
+
+    <tr> 
+      <td>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top" width="2%"></td>
+            <td width="96%">
+              <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                <tr align="center"> 
+                  <td><b><font color="#FFFFFF">&lt&lt ตั้งกระทู้ใหม่ &gt&gt 
+                    </font></b></td>
+                </tr>
+              </table>
+            </td>
+            <td valign="top" align="right" width="2%"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table border=0 cellpadding=2 cellspacing=1 width="100%">
+            <tr> 
+              <td align=center colspan="2" bgcolor="#E5E5FF"> 
+                <table width="100%" border="0" cellpadding="2" cellspacing="0">
+                  <tr> 
+                    <td width="27%"> 
+                      <div align="right"><font color="red"><b>*</b></font> <font color="#686898"><b>หมวดหมู่ :&nbsp;&nbsp;&nbsp;</b></font></div>
+                    </td>
+                    <td width="73%"> 
+                      <div align="left"><select name="category_id">
+  <option value="">------------------------- โปรดเลือกหมวดหมู่ของกระทู้ -------------------------</option>
+<option value="3">หมวด3</option><option value="1">หมวดหมู่ที่ 1</option><option value="2">หมวดหมู่ที่ 2</option>
+</select></div>
+                    </td>
+                  </tr>
+
+                  <tr> 
+                    <td> 
+                      <div align="right"><font color="red"><b>*</b></font> <font color="#686898"><b>หัวข้อกระทู้ :&nbsp;&nbsp;&nbsp;</b></font></div>
+                    </td>
+                    <td> 
+                      <div align="left"><input type="text" name="topic_name" size="60" maxlength="200"></div>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td valign="top"> 
+                      <div align="right"><font color="red"><b>*</b></font> <font color="#686898"><b>ข้อความ :&nbsp;&nbsp;&nbsp;</b></font></div>
+                    </td>
+                    <td> 
+                      <div align="left"><textarea rows="20" cols="62" name="msg" id="msg">โปรดกรอกข้อความที่นี่</textarea></div>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td> 
+                      <div align="right"><font color="red"><b>*</b></font> <font color="#686898"><b>โดย :&nbsp;&nbsp;&nbsp;</b></font></div>
+                    </td>
+                    <td> 
+                      <div align="left"><input type=text name="fullname" size="30" maxlength="200"></div>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td> 
+                      <div align="right"><font color="red"><b>*</b></font> <font color="#686898"><b>อีเมล์ :&nbsp;&nbsp;&nbsp;</b></font></div>
+                    </td>
+                    <td><div align="left"> 
+                      <input type=text name="email" size="30" maxlength="100"> <input type="checkbox" name="is_email" value="1"> <font color="#666666">ส่งเมล์แจ้งเมื่อมีผู้ตอบคำถาม</font></div> 
+                    </td>
+                  </tr>
+
+                  <tr> 
+                    <td> 
+                      <div align="right"><font color="#686898"><b>เบอร์โทรศัพท์ :&nbsp;&nbsp;&nbsp;</b></font></div>
+                    </td>
+                    <td> 
+                      <div align="left"><input type=text name="tel" size="30" maxlength="100"></div>
+                    </td>
+                  </tr>
+
+                  <tr> 
+                    <td> 
+                      <div align="right"><font color="#686898"><b>ไฟล์ประกอบ :&nbsp;&nbsp;&nbsp;</b></font></div>
+                    </td>
+                    <td> 
+                      <div align="left"><input name="filesattach_name[]" id="filesattach_name" type="file" size="30" /></div>
+                    </td>
+                  </tr>
+
+                  <tr> 
+                    <td> 
+                      <div align="right"><font color="#686898"><b>รูปภาพประกอบ :&nbsp;&nbsp;&nbsp;</b></font></div>
+                    </td>
+                    <td> 
+                      <div align="left"><input name="filesattach_name[]" id="imgattach_name" type="file" size="30" /> </div>
+                    </td>
+                  </tr>
+
+                  <tr> 
+                    <td> 
+                      
+
+                </table>
+              </td>
+            </tr>
+
+            <tr bgcolor="#CCCCFF"> 
+              <td align=center colspan=2><b><font color="red">&lt&lt ตั้งรหัสผ่านสำหรับ แก้ไข/ลบ กระทู้ของคุณ &gt&gt</font></b></td>
+            </tr>
+
+            <tr> 
+              
+            <td align=center colspan=2 bgcolor="E5E5FF">
+<br><font color="#686898"><b>:: โปรดกรอกรหัสผ่านที่ต้องการใช้ ในการแก้ไข/ลบ กระทู้ที่ท่านได้โพสไว้ ::</b></font><br><br><input type="password" name="password_to_edit" size="30" maxlength="20"><br><font color="#686898"><b>[ ไม่เกิน 20 ตัวอักษร ]</b></font><br><br>
+              </td>
+            </tr>
+
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td valign="bottom" width="2%"></td>
+            <td width="96%"> 
+              <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                <tr align="center" valign="middle"> 
+                  <td><b><font color="#FFFFFF" class=size3> 
+                    <input type=submit value='ตั้งกระทู้ใหม่' name="submit">
+                    <input type=reset value='ยกเลิก' name="reset">
+                    </font></b></td>
+                </tr>
+              </table>
+            </td>
+            <td valign="bottom" align="right" width="2%"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+   </form>
+
+
+
+
+
+
+
+
+
+
+  </table>
+<br>  
+
+
+</body>
+</html>
